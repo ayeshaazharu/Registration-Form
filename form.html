@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Responsive Registration Form</title>
+    <style>
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+            margin: 60;
+        }
+
+        /* Form container */
+        form {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 600%;
+            box-sizing: border-box;
+        }
+
+        /* Heading */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        /* Radio buttons */
+        input[type="radio"] {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        /* Buttons */
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 12px 25px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #d7372f;
+        }
+
+        /* Center buttons */
+        .buttons {
+            text-align: center;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            form {
+                padding: 20px;
+            }
+
+            td {
+                display: block;
+                width: 100%;
+            }
+
+            td:first-child {
+                margin-top: 10px;
+            }
+
+            td input[type="radio"] {
+                margin-left: 0;
+            }
+
+            .buttons input {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>Registration Form</h1>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" placeholder="Enter your name"></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="number" placeholder="Enter your Age"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="Gender">Male
+                    <input type="radio" name="Gender">Female
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" placeholder="Enter your email"></td>
+            </tr>
+            <tr>
+                <td>Select a Course:</td>
+                <td>
+                    <select>
+                        <option>Java</option>
+                        <option>Python Programming</option>
+                        <option>C++</option>
+                        <option>C Programming</option>
+                        <option>AI</option>
+                        <option>Full Stack</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Upload your Resume</td>
+                <td><input type="file"></td>
+            </tr>
+        </table>
+        <div class="buttons">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+
+</html>
